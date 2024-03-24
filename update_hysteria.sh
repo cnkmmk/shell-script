@@ -5,4 +5,5 @@ hysver=`curl -Ls "https://api.github.com/repos/apernet/hysteria/releases/latest"
 wget -O /usr/local/bin/hysteria https://github.com/apernet/hysteria/releases/download/${hysver}/hysteria-linux-${arch}
 chmod +x /usr/local/bin/hysteria
 systemctl start hysteria
+sleep 5
 systemctl status hysteria
