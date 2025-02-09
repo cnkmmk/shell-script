@@ -25,8 +25,6 @@ NEW_PORT=$((CURRENT_PORT + 1))
 sed -i.bak "s/listen: :${CURRENT_PORT}/listen: :${NEW_PORT}/" "$CONFIG_FILE"
 
 /usr/bin/systemctl restart hysteria-server
-/usr/bin/sleep 5
-/usr/bin/systemctl status hysteria-server
 
 # 输出结果
 echo "${NEW_PORT}"
