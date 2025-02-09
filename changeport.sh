@@ -25,7 +25,7 @@ NEW_PORT=$((CURRENT_PORT + 1))
 sed -i.bak "s/listen: :${CURRENT_PORT}/listen: :${NEW_PORT}/" "$CONFIG_FILE"
 
 # 输出结果
-echo "已将端口号从 ${CURRENT_PORT} 修改为 ${NEW_PORT}。"
+echo "${NEW_PORT}"
 
 /usr/bin/systemctl restart hysteria-server
 /usr/bin/sleep 5
