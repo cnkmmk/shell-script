@@ -5,7 +5,7 @@ SINGBOX_CONFIG="/etc/sing-box/config.json"
 HYSTERIA_CONFIG="/etc/hysteria/config.yaml"
 
 # 获取新端口号
-NEW_PORT=$(ssh -p 22551 root@nat.fw.cnkmmk.win "bash <(curl -sSLf https://raw.githubusercontent.com/cnkmmk/shell-script/main/changeport.sh)")
+NEW_PORT=$(ssh -p 22 root@nat.fw.cnkmmk.win "bash <(curl -sSLf https://raw.githubusercontent.com/cnkmmk/shell-script/main/changeport.sh)")
 
 # 检查是否成功获取新端口号
 if [[ -z "$NEW_PORT" ]]; then
